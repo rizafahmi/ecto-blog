@@ -5,5 +5,7 @@ defmodule EctoBlog.Comments do
     field :email, :string
     field :text, :string
 
+    belongs_to :blogs, EctoBlog.Blogs
+
   end
 end

@@ -5,5 +5,7 @@ defmodule EctoBlog.Blogs do
     field :title, :string
     field :body, :string
 
+    has_many :comments, EctoBlog.Comments
+
   end
 end
