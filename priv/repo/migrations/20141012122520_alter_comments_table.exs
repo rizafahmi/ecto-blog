@@ -5,7 +5,9 @@ defmodule EctoBlog.Repo.Migrations.AlterCommentsTable do
     ["ALTER TABLE comments
       ADD blogs_id INTEGER",
       "ALTER TABLE comments
-      ADD FOREIGN KEY(blogs_id) REFERENCES blogs(id);"]
+      ADD FOREIGN KEY(blogs_id) REFERENCES blogs(id);",
+     "UPDATE comments SET blogs_id=1"
+    ]
   end
 
   def down do
